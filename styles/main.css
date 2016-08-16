@@ -1,0 +1,98 @@
+/*made words stick out with advice from here:
+http://graphicdesign.stackexchange.com/questions/29256/text-not-very-readable-on-different-image-backgrounds?newreg=b081417bf4da46f5839f10fb86573c5e */
+
+.jumbotron {
+    color: #5c2040;
+    text-align: center;
+
+}
+
+.navbar-footer {
+    background-color: #5c2040;
+    border-radius: 5px;
+    margin-right: -15px;
+    margin-left: -15px;
+    font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: white;
+    text-align: center;
+}
+
+.random {
+    margin-top: 15px;
+    background-color: rgba(92, 32, 64, .9);
+}
+
+.stories {
+    background-image: url("../images/codeStoryMap.png");
+    text-shadow: 3px 6px 9px #ffffff;
+}
+
+html, body, #map {
+    height: 100%;
+    font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*color: rgba(0, 0, 0, 0.87);*/
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+.mapBox {
+    border: 5px solid #5c2040;
+    border-radius: 10px;
+    height: 33%;
+    width: 97%;
+    margin: auto;
+    /*padding: 15px;*/
+}
+
+.btn-block {
+    background-color: #5c2040;
+}
+
+#whatCodersLike,
+#coderObstacles {
+    text-decoration: none;
+    color: #5c2040;
+}
+
+.yin {
+    margin: -5px;
+}
+
+.card {
+    margin-top: 12px;
+    height: 70%;
+    width: 65%;
+    border: 1px solid #cccccc;
+}
+
+.storyLocation {
+    padding: 12px;
+    /*margin: 12px;*/
+    margin-right: 8px;
+}
+
+.navHeadline {
+    text-align: center;
+    color: white;
+    margin: auto;
+    font-weight: 100;
+}
+
+.navbar-card {
+    margin-top: 12px;
+}
+
+.selected {
+    background-color: #e95420;
+}
+/*legend {*/
+/*text-align: center;*/
+/*}*/
