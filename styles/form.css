@@ -20,14 +20,21 @@
 }
 
 .addStory {
-    margin-top: -21px;
+    margin-top: -26px;
     margin-bottom: 7px;
     text-align: center;
     padding: 5px;
+    padding-top: 11px;
     background-color: rgba(119, 41, 83, .8);
     font-weight: 100;
-
+    border-radius: 4px;
     color: white;
+}
+
+.storyFooter {
+    margin-bottom: -7px;
+    margin-top: -1px;
+    padding-bottom: 12px;
 }
 
 a.interestsOptions,
