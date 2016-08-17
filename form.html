@@ -23,7 +23,7 @@
             </div>
         </nav>
 
-        <form class="form-horizontal">
+        <form id="coderForm" action='https://code-stories.firebaseio.com/stories.json' method="post" class="form-horizontal">
             <fieldset>
                 <legend>Add Your Story</legend>
                 <!--name-->
@@ -63,12 +63,79 @@
                     </div>
                 </div>
 
+                <!--<li class="dropdown">-->
+                <legend>Interest: (Choose One) </legend>
+                    <ul role="menu" class="formListItem">
+                        <li>
+                            <a href="#" id="adventure" class="interestsOptions">Adventure</a>
+                        </li>
+                        <li>
+                            <a href="#" id="creativity" class="interestsOptions">Creativity</a>
+                        </li>
+                        <li>
+                            <a href="#" id="education" class="interestsOptions">Education</a>
+                        </li>
+                        <li>
+                            <a href="#" id="family" class="interestsOptions">Family</a>
+                        </li>
+                        <li>
+                            <a href="#" id="lifeHacks" class="interestsOptions">Life Hacks</a>
+                        </li>
+                        <li>
+                            <a href="#" id="volunteering" class="interestsOptions">Volunteering</a>
+                        </li>
+                        <li>
+                            <a href="#" id="interestOther" class="interestsOptions">Other</a>
+                        </li>
+                    </ul>
+                <!--</li>-->
+
                 <div class="form-group">
-                    <label for="story" class="col-lg-2 control-label">Story</label>
+                    <label for="interestStory" class="col-lg-2 control-label">How did your interests get you into coding?</label>
                     <div class="col-lg-10">
                         <textarea class="form-control"
                                   rows="3"
-                                  id="story"
+                                  id="interestStory"
+                                  placeholder="Captain Janeway overcame some obstacles">
+                        </textarea>
+                <span class="help-block">
+                    Enter your story here.</span>
+                    </div>
+                </div>
+
+                <div class="form-group storyLocation">
+                    <label class="control-label" for="storyLocation">Story Location</label>
+                    <input class="form-control input-sm"
+                           type="text"
+                           id="storyLocation"
+                           placeholder="Make it fun! It can be a place you want to visit or a place related to your story somehow">
+                </div>
+
+                    <legend>Obstacle: (Choose One) </legend>
+                    <ul class="formListItem" role="menu">
+                        <li>
+                            <a href="#" id="tooHard" class="obstaclesOptions">Difficult</a>
+                        </li>
+                        <li>
+                            <a href="#" id="drama" class="obstaclesOptions">Drama</a>
+                        </li>
+                        <li>
+                            <a href="#" id="financial" class="obstaclesOptions">Financial</a>
+                        </li>
+                        <li>
+                            <a href="#" id="noTime" class="obstaclesOptions">Time</a>
+                        </li>
+                        <li>
+                            <a href="#" id="obstacleOther" class="obstaclesOptions">other</a>
+                        </li>
+                    </ul>
+
+                <div class="form-group">
+                    <label for="obstacleStory" class="col-lg-2 control-label">How did you overcome your obstacles?</label>
+                    <div class="col-lg-10">
+                        <textarea class="form-control"
+                                  rows="3"
+                                  id="obstacleStory"
                                   placeholder="Captain Janeway overcame some obstacles">
                         </textarea>
                 <span class="help-block">
@@ -87,19 +154,13 @@
                 <input type="file" value="upload" id="fileButton"/>
 
                 <div class="progress progress-striped">
-                    <progress value="0" max="100" id="uploader" style="height: 20px;width:100%;display:block;" >0%</progress>
+                    <progress value="0" max="100" id="uploader" style="height: 20px; width:100%; display:block;">0%</progress>
                 </div>
-
-
-                    <!-- progress bar-->
-                    <!--<div class="progress-bar" value="0" max="100"></div>-->
-                <!--</div>-->
-
 
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button type="reset" class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </fieldset>
@@ -155,6 +216,7 @@
     firebase.initializeApp(config);
 </script>
 
+<script src="scripts/form.js"></script>
 <script src="scripts/storage.js"></script>
 
 </body>
