@@ -5,30 +5,25 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-pVJelSCJ58Og1XDc2E95RVYHZDPb9AVyXsI8NoVpB2xmtxoZKJePbMfE4mlXw7BJ" crossorigin="anonymous">
     <link href="styles/main.css" type="text/css" rel="stylesheet">
+    <link href="styles/form.css" type="text/css" rel="stylesheet">
 
     <title>Add Your Story</title>
 </head>
 <body>
 <div class="container">
-    <div class="card">
-        <nav class="navbar navbar-inverse navbar-card">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <h1 class="navHeadline">Code Stories</h1>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <div class="formCard">
+        <div class="navbar navbar-inverse">
+            <h1>Code Stories</h1>
+        </div>
 
-        <form id="coderForm" action='https://code-stories.firebaseio.com/stories.json' method="post" class="form-horizontal">
+        <form id="coderForm" class="form-horizontal">
             <fieldset>
-                <legend>Add Your Story</legend>
-                <!--name-->
+                <h4 class="addStory">Add Your Story</h4>
+
                 <div class="form-group">
-                    <label for="name" class="col-lg-2 control-label">Name</label>
+                    <label for="name" class="col-lg-2 control-label">
+                        <h3>Name</h3>
+                    </label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control"
                                id="name"
@@ -40,58 +35,62 @@
 
                 <!--story type-->
                 <div class="form-group">
-                    <label class="col-lg-2 control-label">Story Type</label>
+                    <h3 class="col-lg-2">Story Type</h3>
                     <div class="col-lg-10">
                         <div class="radio">
-                            <label>
-                                <input type="radio"
-                                       name="optionsRadios"
-                                       id="interest"
-                                       value="option1"
-                                       checked="">
+                            <input type="radio"
+                                   name="optionsRadios"
+                                   id="interest"
+                                   value="interest"
+                                   checked="">
+                            <label for="interest">
                                 Interest
                             </label>
                         </div>
                         <div class="radio">
-                            <label>
-                                <input type="radio"
-                                       name="optionsRadios"
-                                       id="obstacle"
-                                       value="option2">
-                                Obstacle </label>
+                            <input type="radio"
+                                   name="optionsRadios"
+                                   id="obstacle"
+                                   value="obstacle">
+                            <label for="obstacle">
+                                Obstacle
+                            </label>
                         </div>
                     </div>
                 </div>
 
                 <!--<li class="dropdown">-->
-                <legend>Interest: (Choose One) </legend>
-                    <ul role="menu" class="formListItem">
-                        <li>
-                            <a href="#" id="adventure" class="interestsOptions">Adventure</a>
-                        </li>
-                        <li>
-                            <a href="#" id="creativity" class="interestsOptions">Creativity</a>
-                        </li>
-                        <li>
-                            <a href="#" id="education" class="interestsOptions">Education</a>
-                        </li>
-                        <li>
-                            <a href="#" id="family" class="interestsOptions">Family</a>
-                        </li>
-                        <li>
-                            <a href="#" id="lifeHacks" class="interestsOptions">Life Hacks</a>
-                        </li>
-                        <li>
-                            <a href="#" id="volunteering" class="interestsOptions">Volunteering</a>
-                        </li>
-                        <li>
-                            <a href="#" id="interestOther" class="interestsOptions">Other</a>
-                        </li>
-                    </ul>
+                <h3>Interest: (Choose One)</h3>
+                <div role="menu" class="formListItem">
+                    <li>
+                        <a href="#" id="adventure" class="interestsOptions">Adventure</a>
+                    </li>
+                    <li>
+                        <a href="#" id="creativity" class="interestsOptions">Creativity</a>
+                    </li>
+                    <li>
+                        <a href="#" id="education" class="interestsOptions">Education</a>
+                    </li>
+                    <li>
+                        <a href="#" id="family" class="interestsOptions">Family</a>
+                    </li>
+                    <li>
+                        <a href="#" id="lifeHacks" class="interestsOptions">Life Hacks</a>
+                    </li>
+                    <li>
+                        <a href="#" id="volunteering" class="interestsOptions">Volunteering</a>
+                    </li>
+                    <li>
+                        <a href="#" id="interestOther" class="interestsOptions">Other</a>
+                    </li>
+                </div>
                 <!--</li>-->
 
                 <div class="form-group">
-                    <label for="interestStory" class="col-lg-2 control-label">How did your interests get you into coding?</label>
+                    <label for="interestStory" class="col-lg-2 control-label">
+                        <h3>How did your interests get you into
+                            coding?</h3>
+                    </label>
                     <div class="col-lg-10">
                         <textarea class="form-control"
                                   rows="3"
@@ -103,35 +102,39 @@
                     </div>
                 </div>
 
-                <div class="form-group storyLocation">
-                    <label class="control-label" for="storyLocation">Story Location</label>
+                <div class="form-group interestStoryLocation">
+                    <label class="control-label" for="interestStoryLocation">
+                        <h3>Story Location</h3>
+                    </label>
                     <input class="form-control input-sm"
                            type="text"
-                           id="storyLocation"
+                           id="interestStoryLocation"
                            placeholder="Make it fun! It can be a place you want to visit or a place related to your story somehow">
                 </div>
 
-                    <legend>Obstacle: (Choose One) </legend>
-                    <ul class="formListItem" role="menu">
-                        <li>
-                            <a href="#" id="tooHard" class="obstaclesOptions">Difficult</a>
-                        </li>
-                        <li>
-                            <a href="#" id="drama" class="obstaclesOptions">Drama</a>
-                        </li>
-                        <li>
-                            <a href="#" id="financial" class="obstaclesOptions">Financial</a>
-                        </li>
-                        <li>
-                            <a href="#" id="noTime" class="obstaclesOptions">Time</a>
-                        </li>
-                        <li>
-                            <a href="#" id="obstacleOther" class="obstaclesOptions">other</a>
-                        </li>
-                    </ul>
+                <h3>Obstacle: (Choose One)</h3>
+                <div class="formListItem" role="menu">
+                    <li>
+                        <a href="#" id="tooHard" class="obstaclesOptions">Difficult</a>
+                    </li>
+                    <li>
+                        <a href="#" id="drama" class="obstaclesOptions">Drama</a>
+                    </li>
+                    <li>
+                        <a href="#" id="financial" class="obstaclesOptions">Financial</a>
+                    </li>
+                    <li>
+                        <a href="#" id="noTime" class="obstaclesOptions">Time</a>
+                    </li>
+                    <li>
+                        <a href="#" id="obstacleOther" class="obstaclesOptions">other</a>
+                    </li>
+                </div>
 
                 <div class="form-group">
-                    <label for="obstacleStory" class="col-lg-2 control-label">How did you overcome your obstacles?</label>
+                    <label for="obstacleStory" class="col-lg-2 control-label">
+                        <h3>How did you overcome your obstacles?</h3>
+                    </label>
                     <div class="col-lg-10">
                         <textarea class="form-control"
                                   rows="3"
@@ -143,18 +146,21 @@
                     </div>
                 </div>
 
-                <div class="form-group storyLocation">
-                    <label class="control-label" for="storyLocation">Story Location</label>
+                <div class="form-group obstacleStoryLocation">
+                    <label class="control-label" for="obstacleStoryLocation">
+                        <h3>Story Location</h3>
+                    </label>
                     <input class="form-control input-sm"
                            type="text"
-                           id="storyLocation"
+                           id="obstacleStoryLocation"
                            placeholder="Make it fun! It can be a place you want to visit or a place related to your story somehow">
                 </div>
 
                 <input type="file" value="upload" id="fileButton"/>
 
                 <div class="progress progress-striped">
-                    <progress value="0" max="100" id="uploader" style="height: 20px; width:100%; display:block;">0%</progress>
+                    <progress value="0" max="100" id="uploader" style="height: 20px; width:100%; display:block;">0%
+                    </progress>
                 </div>
 
                 <div class="form-group">
