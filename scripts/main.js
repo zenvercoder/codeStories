@@ -426,7 +426,7 @@ function randomStory() {
             animation: google.maps.Animation.DROP,
             icon: randoIcon,
             id: whichObsObject
-        });
+        });``
 
         marker.setMap(map);
         // Push the marker to our array of markers.
@@ -445,7 +445,7 @@ function randomStory() {
 }
 
 // this will run when everything has been loaded. It won't run until other scripts have loaded
-$( document ).ready(function() {
+$(document).ready(function() {
 // Initialize Firebase
     var config = {
         apiKey: "AIzaSyApBPV1BrVOwQMHFNMN_pvUvd_dv7kPFx0",
@@ -465,5 +465,31 @@ $( document ).ready(function() {
 // only have it set to true while you're developing because anyone can read or write to your database
 
     initMap();
+
+    //https://code-stories.firebaseio.com/stories.json?print=pretty
+    //GET
+
+    // Create a new XMLHttpRequest object to start
+    var storiesRequest = new XMLHttpRequest();
+
+// Create a function that is called when the request status has changed
+    storiesRequest.onreadystatechange = function () {
+        // When the readyState is 4 that means the request has completed
+        if (this.readyState == 4 && this.status == 200) {
+            // We know the data is JSON, so let's parse it to JS
+            var storiesRetrieved = JSON.parse(this.responseText);
+            // And now we can consume the data from Reddit. :)
+            console.log(storiesRetrieved);
+
+
+        }
+    }
+
+// Tell the XMLHttpRequest where you want it to go and how
+    storiesRequest.open('GET', 'https://code-stories.firebaseio.com/stories.json?print=pretty');
+
+// Send it off! Good luck little XMLHttpRequest! :D
+    storiesRequest.send();
+
 });
 
