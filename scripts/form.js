@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    var interestChosen;
 
     $("#interest").click(function () {
         $(".obstacleList").css("display", "none");
@@ -11,19 +12,10 @@ $(document).ready(function () {
 
     $(".interestsOptions").click(function () {
 
-        var interestChosen = $(this).attr('id');
-        console.log("this= ", this);
+        interestChosen = $(this).attr('id');
+        var interestText = $(this).text();
 
-        if ($(this).hasClass('formSelected') == true) {
-            console.log('hasClass');
-            $(this).removeClass('formSelected');
-        } else {
-            $(this).addClass('formSelected');
-        }
-
-        console.log(interestChosen);
-
-
+        $('.interestChosenSentence').text('How has ' + interestText + ' brought you to coding?');
         $(".interestStoryField").toggle("slow", function () {
             // Animation complete.
         });
@@ -58,28 +50,27 @@ $(document).ready(function () {
 
     };
 
-
     $('#submit').on('click', function () {
 
         // get elements
-        var nameElement = $('#name');
+        var nameElement = $('#name').val();
         // this is the correct way to get the value of a text input field
+        var storyElement = $('#interestStory').val();
+        console.log('storyElement= ', storyElement);
+        console.log('nameElement= ', nameElement);
+        console.log('interestChosen= ', interestChosen);
 
 
-        console.log(nameElement.val());
-        var interestElement = $('#interest');
-        var obstacleElement = $('#obstacle');
-        var storyElement = $('#story');
+        //var obstacleElement = $('#obstacle');
         var storyLocationElement = $('#storyLocation');
 
-        console.log(storyElement.val(), storyLocationElement.val());
-
         var newStoryObj = {
-            "name": nameElement.val(),
-            "story": storyElement.val(),
+            "contact": '',
+            "interest": interestChosen,
             "location": storyLocationElement.val(),
-
-
+            "name": nameElement,
+            "obstacle": '',
+            "story": storyElement,
         };
 
         console.log(newStoryObj);
@@ -93,3 +84,13 @@ $(document).ready(function () {
 });
 
 
+// TODO if user clicks on more than one interest or obstacle, the dom elements below do not disappear or..
+// Story + location input fields disappear only if user chooses interest v obstacle (and not a different interest or obstacle)
+
+//TODO: add color style to selected interests or obstacles
+//if ($(this).hasClass('formSelected') == true) {
+//    console.log('hasClass');
+//    $(this).removeClass('formSelected');
+//} else {
+//    $(this).addClass('formSelected');
+//}
