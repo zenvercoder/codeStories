@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 
+
     $("#interest").click(function () {
         $(".obstacleList").css("display", "none");
         hideForm();
@@ -10,10 +11,22 @@ $(document).ready(function () {
     });
 
     $(".interestsOptions").click(function () {
+
+        var interestChosen = $(this).attr('id');
+        console.log(interestChosen);
+
+
+        //if (interestChosen === null) {
+        //    interestChosen = $(this).addClass('formSelected');
+        //} else {
+        //    interestChosen.removeClass('formSelected');
+        //    interestChosen = $(this).addClass('formSelected');
+        //}
+
+
         $(".interestStoryField").toggle("slow", function () {
             // Animation complete.
         });
-
         $(".imgUpload").toggle("slow", function () {
             // Animation complete.
         });
@@ -46,29 +59,31 @@ $(document).ready(function () {
     };
 
 
-    // to toggle:
-    // interestList
-    // interestStoryField
-    // interestStoryLocation
-    // obstacleList
-    // obstacleStoryField
-    // obstacleStoryLocation
-    // progress
-
 
     $('#submit').on('click', function () {
+
         // get elements
         var nameElement = $('#name');
+        // this is the correct way to get the value of a text input field
+
+
+
+        console.log(nameElement.val());
         var interestElement = $('#interest');
         var obstacleElement = $('#obstacle');
         var storyElement = $('#story');
         var storyLocationElement = $('#storyLocation');
 
+        console.log(storyElement.val(), storyLocationElement.val());
+
         var newStoryObj = {
             "name": nameElement.val(),
             "story": storyElement.val(),
             "location": storyLocationElement.val(),
-        }
+
+
+
+    };
 
         console.log(newStoryObj);
 
