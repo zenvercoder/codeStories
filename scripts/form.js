@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
 
-
     $("#interest").click(function () {
         $(".obstacleList").css("display", "none");
         hideForm();
@@ -13,15 +12,16 @@ $(document).ready(function () {
     $(".interestsOptions").click(function () {
 
         var interestChosen = $(this).attr('id');
+        console.log("this= ", this);
+
+        if ($(this).hasClass('formSelected') == true) {
+            console.log('hasClass');
+            $(this).removeClass('formSelected');
+        } else {
+            $(this).addClass('formSelected');
+        }
+
         console.log(interestChosen);
-
-
-        //if (interestChosen === null) {
-        //    interestChosen = $(this).addClass('formSelected');
-        //} else {
-        //    interestChosen.removeClass('formSelected');
-        //    interestChosen = $(this).addClass('formSelected');
-        //}
 
 
         $(".interestStoryField").toggle("slow", function () {
@@ -50,7 +50,7 @@ $(document).ready(function () {
         });
     });
 
-    function hideForm(){
+    function hideForm() {
         $(".interestStoryField").css("display", "none");
         $(".obstaclessOptions").css("display", "none");
         $(".obstacleStoryField").css("display", "none");
@@ -59,13 +59,11 @@ $(document).ready(function () {
     };
 
 
-
     $('#submit').on('click', function () {
 
         // get elements
         var nameElement = $('#name');
         // this is the correct way to get the value of a text input field
-
 
 
         console.log(nameElement.val());
@@ -82,8 +80,7 @@ $(document).ready(function () {
             "location": storyLocationElement.val(),
 
 
-
-    };
+        };
 
         console.log(newStoryObj);
 
