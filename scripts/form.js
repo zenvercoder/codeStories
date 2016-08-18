@@ -1,48 +1,49 @@
+$(document).ready(function () {
 
-$(document).ready(function() {
 
-
-    $( "#interest" ).click(function() {
-
+    $("#interest").click(function () {
         $(".obstacleList").css("display", "none");
-        $( ".obstaclessOptions" ).css("display", "none");
-        $( ".obstacleStoryField" ).css("display", "none");
-
-        $( ".interestList" ).toggle( "slow", function() {
-            // Animation complete.
-        });
-
-    });
-
-    $( ".interestsOptions" ).click(function() {
-        $( ".interestStoryField" ).toggle( "slow", function() {
-            // Animation complete.
-        });
-
-        $( ".imgUpload" ).toggle( "slow", function() {
+        hideForm();
+        $(".interestList").toggle("slow", function () {
             // Animation complete.
         });
     });
 
-    $( "#obstacle" ).click(function() {
+    $(".interestsOptions").click(function () {
+        $(".interestStoryField").toggle("slow", function () {
+            // Animation complete.
+        });
 
+        $(".imgUpload").toggle("slow", function () {
+            // Animation complete.
+        });
+    });
+
+    $("#obstacle").click(function () {
         $(".interestList").css("display", "none");
-        $( ".interestStoryField" ).css("display", "none");
+        hideForm();
+        $(".obstacleList").toggle("slow", function () {
+            // Animation complete.
+        });
 
-        $( ".obstacleList" ).toggle( "slow", function() {
+    });
+
+    $(".obstaclesOptions").click(function () {
+        $(".obstacleStoryField").toggle("slow", function () {
+            // Animation complete.
+        });
+        $(".imgUpload").toggle("slow", function () {
             // Animation complete.
         });
     });
 
-    $( ".obstaclesOptions" ).click(function() {
-        $( ".obstacleStoryField" ).toggle( "slow", function() {
-            // Animation complete.
-        });
+    function hideForm(){
+        $(".interestStoryField").css("display", "none");
+        $(".obstaclessOptions").css("display", "none");
+        $(".obstacleStoryField").css("display", "none");
+        $(".imgUpload").css("display", "none");
 
-        $( ".imgUpload" ).toggle( "slow", function() {
-            // Animation complete.
-        });
-    });
+    };
 
 
     // to toggle:
@@ -55,7 +56,7 @@ $(document).ready(function() {
     // progress
 
 
-    $('#submit').on('click', function(){
+    $('#submit').on('click', function () {
         // get elements
         var nameElement = $('#name');
         var interestElement = $('#interest');

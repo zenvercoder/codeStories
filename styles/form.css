@@ -2,14 +2,8 @@
     margin-top: 12px;
     padding: 15px;
     /*width: 65%;*/
-    background-color: rgba(248, 236, 243, .9);
+    background-color: rgba(248, 236, 243, .3);
     border: 1px solid #cccccc;
-}
-
-.storyLocation {
-    padding: 12px;
-    /*margin: 12px;*/
-    margin-right: 8px;
 }
 
 .navbar > h1 {
@@ -53,10 +47,7 @@ a.obstaclesOptions {
     /*margin-right: 15px;*/
 }
 
-.interestStoryLocation,
-.obstacleStoryLocation {
-    padding: 15px;
-}
+
 
 ul.formListItem {
     margin: auto;
@@ -65,3 +56,30 @@ ul.formListItem {
 .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]{
     margin-left: 0;
 }
+
+#interestStoryLocation,
+#obstacleStoryLocation {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 15px;
+    width: 97%;
+}
+
+.interestStoryLocation,
+.obstacleStoryLocation {
+padding: 12px;
+margin-left: 12px;
+margin-right: 8px;
+}
+
+.form-control {
+    overflow: hidden;
+}
+
+/*form-horizontal .form-group*/
+
+/*.interestStoryLocation,*/
+/*.obstacleStoryLocation {*/
+    /*!*margin: 15px;*!*/
+    /*padding: 15px;*/
+/*}*/

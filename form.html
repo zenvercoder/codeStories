@@ -42,7 +42,7 @@
                                    name="optionsRadios"
                                    id="interest"
                                    value="interest"
-                                   checked="">
+                            >
                             <label for="interest">
                                 Interest
                             </label>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <div role="menu" class="formListItem interestList">
+                <div role="menu" class="formListItem interestList" style="display: none;">
                     <h3>Interest: (Choose One)</h3>
 
                     <li>
@@ -85,33 +85,32 @@
                     </li>
                 </div>
 
-                <div class="form-group interestStoryField">
+                <div class="form-group interestStoryField" style="display: none;">
                     <label for="interestStory" class="col-lg-2 control-label">
                         <h3>How did your interests get you into
                             coding?</h3>
                     </label>
                     <div class="col-lg-10">
-                        <textarea class="form-control"
+                        <input class="form-control"
                                   rows="3"
                                   id="interestStory"
-                                  placeholder="Captain Janeway overcame some obstacles">
-                        </textarea>
-                <span class="help-block">
-                    Enter your story here.</span>
+                                  placeholder="Enter your story here. (1-2 sentences)">
+                        </input>
+
+                    </div>
+
+                    <div class="form-group interestStoryLocation">
+                        <label class="control-label interestStoryLocation" for="interestStoryLocation">
+                            <h3>Story Location</h3>
+                        </label>
+                        <input class="form-control input-sm"
+                               type="text"
+                               id="interestStoryLocation"
+                               placeholder="Make it fun! It can be a place you want to visit or a place related to your story somehow">
                     </div>
                 </div>
 
-                <div class="form-group interestStoryLocation">
-                    <label class="control-label" for="interestStoryLocation">
-                        <h3>Story Location</h3>
-                    </label>
-                    <input class="form-control input-sm"
-                           type="text"
-                           id="interestStoryLocation"
-                           placeholder="Make it fun! It can be a place you want to visit or a place related to your story somehow">
-                </div>
-
-                <div class="formListItem obstacleList" role="menu">
+                <div class="formListItem obstacleList" style="display: none;" role="menu">
                     <h3>Obstacle: (Choose One)</h3>
 
                     <li>
@@ -131,32 +130,31 @@
                     </li>
                 </div>
 
-                <div class="form-group obstacleStoryField">
+                <div class="form-group obstacleStoryField" style="display: none;">
                     <label for="obstacleStory" class="col-lg-2 control-label">
-                        <h3>How did you overcome your obstacles?</h3>
+                        <h3>How did you overcome your obstacles? </h3>
                     </label>
                     <div class="col-lg-10">
-                        <textarea class="form-control"
+                        <input class="form-control"
                                   rows="3"
                                   id="obstacleStory"
-                                  placeholder="Captain Janeway overcame some obstacles">
-                        </textarea>
-                <span class="help-block">
-                    Enter your story here.</span>
+                                  placeholder="Enter your story here. (1-2 sentences)">
+                        </input>
+                    </div>
+                    <!--</div>-->
+
+                    <div class="form-group obstacleStoryLocation">
+                        <label class="control-label obstacleStoryLocation" for="obstacleStoryLocation">
+                            <h3>Story Location</h3>
+                        </label>
+                        <input class="form-control input-sm"
+                               type="text"
+                               id="obstacleStoryLocation"
+                               placeholder="Make it fun! It can be a place you want to visit or a place related to your story somehow">
                     </div>
                 </div>
 
-                <div class="form-group obstacleStoryLocation">
-                    <label class="control-label" for="obstacleStoryLocation">
-                        <h3>Story Location</h3>
-                    </label>
-                    <input class="form-control input-sm"
-                           type="text"
-                           id="obstacleStoryLocation"
-                           placeholder="Make it fun! It can be a place you want to visit or a place related to your story somehow">
-                </div>
-
-                <div class="imgUpload">
+                <div class="imgUpload" style="display: none;">
                     <label>
                         <h3>Upload an image</h3>
                     </label>
