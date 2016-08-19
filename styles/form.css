@@ -37,9 +37,7 @@ a.obstaclesOptions {
     color: black;
 }
 
-.interestsOptions:hover {
-    color: #e95420;
-}
+
 
 .formSelected {
     color: #e95420;
@@ -59,7 +57,13 @@ a.obstaclesOptions {
     /*margin-right: 15px;*/
 }
 
+.brand {
+    margin: auto;
+}
 
+li.dropdown {
+    list-style: none;
+}
 
 ul.formListItem {
     margin: auto;
@@ -69,9 +73,9 @@ ul.formListItem {
     margin-left: 0;
 }
 
-.radio:hover {
-    color: #e95420;
-}
+/*.radio:hover {*/
+    /*color: #e95420;*/
+/*}*/
 
 #interestStoryLocation,
 #obstacleStoryLocation {
@@ -88,7 +92,23 @@ margin-left: 12px;
 margin-right: 8px;
 }
 
-.form-control {
-    overflow: hidden;
+/*.form-control {*/
+    /*overflow: hidden;*/
+/*}*/
+
+form label {
+    margin: 20px 15px 10px 15px;
+    font-size: 15px;
 }
+
+.btn-group.btn-group-justified{
+    padding: 20px;
+    margin-right: 5px;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+}
+
 
