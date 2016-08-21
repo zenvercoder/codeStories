@@ -1,3 +1,6 @@
+a {
+    list-style: none;
+}
 
 .mdl-badge {
     color: rgba(0, 0, 0, 0.24);
@@ -7,6 +10,16 @@
 }
 .mdl-badge.material-icons:after {
     left: 20px;
+}
+
+.mdl-card {
+    min-height: 180px;
+}
+
+#whatCodersLike,
+#coderObstacles {
+    text-decoration: none;
+    color: #5c2040;
 }
 
 .demo-card-wide.mdl-card {
@@ -39,3 +52,52 @@
     background-color: #5c2040;
 }
 
+.mapBox {
+    /*height: 33%;*/
+    height: 450px;
+}
+
+#map {
+    height: 100%;
+    font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*color: rgba(0, 0, 0, 0.87);*/
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.yin_brand {
+    height: 35px;
+    width: 35px;
+}
+
+.mdl-layout__drawer {
+    background-color: white;
+}
+
+.mdl-layout-title {
+    /*border-bottom: 1px solid #e0e0e0;*/
+    box-sizing: border-box;
+    display: block;
+    /*height: 64px;*/
+    padding: 12px 0 11px 24px;
+    position: relative;
+}
+
+.mdl-layout__header .mdl-layout__drawer-button {
+    margin: 7px;
+}
+
+.mdl-layout__header .mdl-layout__drawer-button i.material-icons {
+    font-size: 130%;
+
+}
+
+.mdl-navigation__link {
+    opacity:1;
+}
+
+.summary {
+    align-content: center;
+    /*text-align: center;*/
+}
