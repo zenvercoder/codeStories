@@ -1,0 +1,43 @@
+{
+    "anonymous": {
+      // either interest or obstacle per bio card/marker
+      "interest": "adventure",
+      // only 1 - 2 sentences
+      "obstacle": "tooHard",
+      "story": "related to interest or obstacle",
+      // optional
+      "contact": {
+        "github": "",
+        "linkedIn": "",
+        "codepen": "",
+        "email": ""
+      },
+      //image: url(""),
+      "location": {
+        "lat": -9.189967,
+        "lng": -75.015152
+      },
+      "locationInfo": "I chose the jungles of Peru because I plan on going there to reward myself after a year of working in development"
+    },
+    "name2": {
+      // optional
+      // either interest or obstacle per bio card/marker
+      "interest": "adventure",
+      // only 1 - 2 sentences
+      "obstacle": "tooHard",
+      "story": "related to interest or obstacle",
+      // optional
+      "contact": {
+        "github": "",
+        "linkedIn": "",
+        "codepen": "",
+        "email": ""
+      },
+      //image: url(""),
+      "location": {
+        "lat": -9.189967,
+        "lng": -75.015152
+      },
+      "locationInfo": "I chose the jungles of Peru because I plan on going there to reward myself after a year of working in development"
+    }
+  }

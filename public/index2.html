@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+
+    <!--<link href="styles/main.css" type="text/css" rel="stylesheet">-->
+    <link href="styles/index2.css" type="text/css" rel="stylesheet">
+
+    <title>Add Your Story</title>
+</head>
+<body>
+
+
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <a class="mdl-navigation__link mdl-layout-title" href="form2.html">Code Stories</a>
+            <div class="mdl-layout-spacer"></div>
+
+            <!-- Right aligned menu below button -->
+            <a id="showGalvanize" class="mdl-navigation__link" href="">Show Galvanize</a>
+            <a id="hideGalvanize" class="mdl-navigation__link" href="">Hide Galvanize</a>
+
+            <button id="demo-menu-lower-right"
+                    class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">list</i>
+            </button>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="demo-menu-lower-right">
+                <li class="mdl-menu__item">Map Styles:</li>
+                <li class="mdl-menu__item">Avocado World</li>
+                <li class="mdl-menu__item">Galvanize colors</li>
+                <li class="mdl-menu__item">Night Vision</li>
+                <li class="mdl-menu__item">Code Stories</li>
+                <li class="mdl-menu__item">Reset to Default</li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Story by Interest</span>
+        <hr>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="#" id="adventure" class="interestsOptions">Adventure</a>
+            <a class="mdl-navigation__link" href="#" id="creativity" class="interestsOptions">Creativity</a>
+            <a class="mdl-navigation__link" href="#" id="education" class="interestsOptions">Education</a>
+            <a class="mdl-navigation__link" href="#" id="family" class="interestsOptions">Family</a>
+            <a class="mdl-navigation__link" href="#" id="lifeHacks" class="interestsOptions">Life Hacks</a>
+            <a class="mdl-navigation__link" href="#" id="volunteering"
+               class="interestsOptions">Volunteering</a>
+        </nav>
+
+        <span class="mdl-layout-title">Story by Obstacle</span>
+        <hr>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="https://www.linkedin.com/in/zenvercoder">LinkedIn</a>
+            <a class="mdl-navigation__link" href="https://github.com/zenvercoder">GitHub</a>
+            <a class="mdl-navigation__link" href="http://codepen.io/zenvercoder/">CodePen</a>
+            <a class="mdl-navigation__link" href="https://twitter.com/zenvercoder?lang=en">Twitter</a>
+        </nav>
+
+        <!--<hr>-->
+        <!--<span class="mdl-layout-title">Galvanize</span>-->
+        <!--<li>-->
+            <!--<a href="#" id="showGalvanize">Show Galvanize Locations</a>-->
+        <!--</li>-->
+<!---->
+        <!--<li>-->
+            <!--<a href="#" id="hideGalvanize">Hide Galvanize Locations</a>-->
+        <!--</li>-->
+
+
+    </div>
+
+</div>
+
+
+<main class="mdl-layout__content">
+    <div class="page-content">
+        <!-- Full Width Section-->
+        <div class="top" style="background-color: white; color: gray; padding: 30px; margin-bottom: 10px;">
+            </center>
+        </div>
+
+        <!-- Top Card -->
+        <div class="mdl-grid">
+
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-card mdl-shadow--2dp demo-card-wide" style="width:100%;">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">See Random Story</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <a href="#" id="whatCodersLike" class="interestsOptions">
+                            <p>See What Coders Like</p>
+                        </a>
+                        <a href="#" id="coderObstacles" class="interestsOptions">
+                            <p>See the Obstacles They've Overcome</p>
+                        </a>
+                        <a href="#" id="coderObstacles" class="interestsOptions" href="form2.html">
+                            <p>Add Your Story</p>
+                        </a>
+                        <!--<a id="coderObstacles" class="addStory mdl-navigation__link mdl-layout-title" href="form2.html">-->
+                            <!--<p>Add Your Story</p>-->
+                        <!--</a>-->
+
+
+                        <p id="coderObstacles" class="interestsOptions">
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-card mdl-shadow--2dp demo-card-wide mapBox" style="width:100%;">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Start 4 Column Section -->
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+
+                <div class="mdl-card__media">
+                    <img src="http://www.cupcakeipsum.com/assets/happy_muffin.png" style="max-height:200px;">
+                </div>
+                <div class="mdl-card__title">
+                    <h4 class="mdl-card__title-text">Cupcake Ipsum</h4>
+                </div>
+                <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                Chocolate bar tiramisu ice cream cotton candy donut cookie toffee.
+                </span>
+                </div>
+
+                <div class="mdl-card__actions">
+
+                    <!-- Icon button link-->
+                    <a href="http://www.cupcakeipsum.com/" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">link</i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__media">
+                    <img src="https://baconipsum.com/wp-content/themes/baconipsum-custom-theme-v2/images/bacon-ipsum-banner1.jpg"
+                         style="max-height:200px;">
+                </div>
+                <div class="mdl-card__title">
+                    <h4 class="mdl-card__title-text">Bacon Ipsum</h4>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <span class="mdl-typography--font-light mdl-typography--subhead">Bacon ipsum dolor amet meatball venison swine pork belly.</span>
+                </div>
+                <div class="mdl-card__actions">
+
+                    <!-- Icon button link-->
+                    <a href="https://baconipsum.com" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">link</i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__media">
+                    <img src="http://image.spreadshirtmedia.com/users/1398000/1397498/363429/img/363429_20110905115709.gif"
+                         style="max-height:200px;">
+                </div>
+                <div class="mdl-card__title">
+                    <h4 class="mdl-card__title-text">Zombie Ipsum</h4>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <span class="mdl-typography--font-light mdl-typography--subhead">Zombies reversus ab inferno, nam malum cerebro.</span>
+                </div>
+                <div class="mdl-card__actions">
+
+                    <!-- Icon button link-->
+                    <a href="http://www.zombieipsum.com/" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">link</i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__media">
+                    <img src="http://gallery.mailchimp.com/52ff5a7b564a106c544c25c8d/images/Screen_Shot_2014_03_11_at_5.36.35_PM.png"
+                         style="max-height:200px;">
+                </div>
+                <div class="mdl-card__title">
+                    <h4 class="mdl-card__title-text">Hipster Ipsum</h4>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <span class="mdl-typography--font-light mdl-typography--subhead">Art party organic blog, narwhal Neutra raw denim migas.</span>
+                </div>
+                <div class="mdl-card__actions">
+
+                    <!-- Icon button link-->
+                    <a href="http://hipsum.co/" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">link</i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+
+        <!-- Begin Footer -->
+        <footer class="demo-footer mdl-mini-footer">
+
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <a target="_blank" class="mdl-navigation__link" href="http://zenvercoder.co">
+                    <span class="mdl-layout-title">zenvercoder</span>
+                </a>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a target="_blank" class="mdl-navigation__link" href="https://www.linkedin.com/in/zenvercoder">LinkedIn</a>
+                    <a target="_blank" class="mdl-navigation__link" href="https://github.com/zenvercoder">GitHub</a>
+                    <a target="_blank" class="mdl-navigation__link" href="http://codepen.io/zenvercoder/">CodePen</a>
+                    <a target="_blank" class="mdl-navigation__link" href="https://twitter.com/zenvercoder?lang=en">Twitter</a>
+                </nav>
+            </div>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">About</span>
+                <nav class="mdl-navigation">
+                    <a target="_blank" class="mdl-navigation__link" href="https://www.linkedin.com/in/zenvercoder">LinkedIn</a>
+                    <a target="_blank" class="mdl-navigation__link" href="https://github.com/zenvercoder">GitHub</a>
+                    <a target="_blank" class="mdl-navigation__link" href="http://codepen.io/zenvercoder/">CodePen</a>
+                    <a target="_blank" class="mdl-navigation__link" href="https://twitter.com/zenvercoder?lang=en">Twitter</a>
+                </nav>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+</main>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places,drawing&key=AIzaSyAK_jsF0g2cc8rGCCrNfd595o5IxxAujOs"></script>
+<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+
+<!--    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>-->
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script src="scripts/data.js"></script>
+<script src="scripts/main2.js"></script>
+
+</body>
+</html>
+
+<!-- TODO stylize default map style for index page-->
+<!--TODO form for people to add their stories-->

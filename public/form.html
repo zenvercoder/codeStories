@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!--https://bootswatch.com/united/-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-pVJelSCJ58Og1XDc2E95RVYHZDPb9AVyXsI8NoVpB2xmtxoZKJePbMfE4mlXw7BJ" crossorigin="anonymous">
+    <link href="styles/main.css" type="text/css" rel="stylesheet">
+    <link href="styles/form.css" type="text/css" rel="stylesheet">
+    <title>Form1</title>
+</head>
+<body>
+<div class="container">
+    <div class="formCard">
+        <div class="navbar navbar-inverse">
+            <h1 class="col-md-4">
+                <a href="index.html">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                </a>
+            </h1>
+            <!--<h1 class="col-md-4"></h1>-->
+            <h1 class="col-md-4">Code Stories</h1>
+            <h1 class="col-md-4">
+                <li class="dropdown">
+                    <a href="#"
+                       class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       role="button"
+                       aria-expanded="false">
+                        <img class="img-responsive brand" src="images/yyBrand.png" alt="yin yang brand"/>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/in/zenvercoder">LinkedIn</a>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://github.com/zenvercoder">GitHub</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://codepen.io/zenvercoder/">Code Pen</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://twitter.com/zenvercoder?lang=en">Twitter</a>
+                        </li>
+                    </ul>
+                </li>
+            </h1>
+
+
+            <!--<h4 class="addStory">Add Your Story</h4>-->
+
+        </div>
+
+        <form id="coderForm">
+            <fieldset>
+                <h3>Name</h3>
+                <!--<h3 class="col-md-6"><span class="glyphicon glyphicon-menu-user" aria-hidden="true"></span></h3>-->
+
+                <div class="form-group">
+                    <input type="text" class="form-control"
+                           id="name"
+                           placeholder="Captain Janeway"
+                           autocomplete="off"
+                           aria-label="name"
+                           style="cursor: pointer; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; background-repeat: no-repeat;">
+                </div>
+
+                <!--story type-->
+                <div class="radio-group">
+                    <h3>Story Type</h3>
+
+                    <div class="btn-group btn-group-justified" role="group">
+                        <div class="btn-group" role="group">
+                            <button type="button" id="interest" class="btn btn-info">Interest</button>
+                        </div>
+                        <div class="btn-group" role="group">
+
+                            <button type="button" id="obstacle" class="btn btn-info">Obstacle</button>
+                        </div>
+                    </div>
+                    <div role="menu" class="formListItem interestList" style="display: none;">
+                        <h3>Interest: (Choose One)</h3>
+
+                        <li>
+                            <a href="#" id="adventure" class="interestsOptions">Adventure</a>
+                        </li>
+                        <li>
+                            <a href="#" id="creativity" class="interestsOptions">Creativity</a>
+                        </li>
+                        <li>
+                            <a href="#" id="education" class="interestsOptions">Education</a>
+                        </li>
+                        <li>
+                            <a href="#" id="family" class="interestsOptions">Family</a>
+                        </li>
+                        <li>
+                            <a href="#" id="lifeHacks" class="interestsOptions">Life Hacks</a>
+                        </li>
+                        <li>
+                            <a href="#" id="volunteering" class="interestsOptions">Volunteering</a>
+                        </li>
+                        <li>
+                            <a href="#" id="interestOther" class="interestsOptions">Other</a>
+                        </li>
+                    </div>
+
+                    <div class="form-group interestStoryField" style="display: none;">
+                        <!--<label for="interestStory" class="col-lg-2 control-label">-->
+                        <h3 class="interestChosenSentence"></h3>
+                        <!--</label>-->
+                        <!--<div class="col-lg-10">-->
+                        <input class="form-control"
+                               rows="3"
+                               id="interestStory"
+                               placeholder="Enter your story here. (1-2 sentences)">
+                        </input>
+                        <!--</div>-->
+
+                        <!--<div class="form-group interestStoryLocation">-->
+                        <label class="control-label interestStoryLocation" for="interestStoryLocation">
+                            <h3>Story Location</h3>
+                        </label>
+                        <input class="form-control input-sm"
+                               type="text"
+                               id="interestStoryLocation"
+                               placeholder="Make it fun! It can be a place you want to visit or a place related to your story somehow">
+                        <!--</div>-->
+                    </div>
+
+                    <div class="formListItem obstacleList" style="display: none;" role="menu">
+                        <h3>Obstacle: (Choose One)</h3>
+
+                        <li>
+                            <a href="#" id="tooHard" class="obstaclesOptions">Difficult</a>
+                        </li>
+                        <li>
+                            <a href="#" id="drama" class="obstaclesOptions">Drama</a>
+                        </li>
+                        <li>
+                            <a href="#" id="financial" class="obstaclesOptions">Financial</a>
+                        </li>
+                        <li>
+                            <a href="#" id="noTime" class="obstaclesOptions">Time</a>
+                        </li>
+                        <li>
+                            <a href="#" id="obstacleOther" class="obstaclesOptions">other</a>
+                        </li>
+                    </div>
+
+                    <div class="form-group obstacleStoryField" style="display: none;">
+                        <label for="obstacleStory" class="col-lg-2 control-label">
+                            <h3>How did you overcome your obstacles? </h3>
+                        </label>
+                        <div class="col-lg-10">
+                            <input class="form-control"
+                                   rows="3"
+                                   id="obstacleStory"
+                                   placeholder="Enter your story here. (1-2 sentences)">
+                            </input>
+                        </div>
+                        <!--</div>-->
+
+                        <div class="form-group obstacleStoryLocation">
+                            <label class="control-label obstacleStoryLocation" for="obstacleStoryLocation">
+                                <h3>Story Location</h3>
+                            </label>
+                            <input class="form-control input-sm"
+                                   type="text"
+                                   id="obstacleStoryLocation"
+                                   placeholder="Make it fun! It can be a place you want to visit or a place related to your story somehow">
+                        </div>
+                    </div>
+
+                    <div class="imgUpload" style="display: none;">
+                        <label>
+                            <h3>Upload an image (optional)</h3>
+                        </label>
+                        <input type="file" value="upload" id="fileButton"/>
+
+                        <div class="progress progress-striped">
+                            <progress value="0" max="100" id="uploader"
+                                      style="height: 20px; width:100%; display:block;">0%
+                            </progress>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2 cancelOrSubmit">
+                            <button type="reset" class="btn btn-default">Cancel</button>
+                            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+            </fieldset>
+        </form>
+
+        <!--<h4 class="addStory storyFooter">Add Your Story</h4>-->
+        <nav class="navbar navbar-inverse navbar-card">
+
+        </nav>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<!--firebase-->
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyApBPV1BrVOwQMHFNMN_pvUvd_dv7kPFx0",
+        authDomain: "code-stories.firebaseapp.com",
+        databaseURL: "https://code-stories.firebaseio.com",
+        storageBucket: "code-stories.appspot.com",
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places,drawing&key=AIzaSyAK_jsF0g2cc8rGCCrNfd595o5IxxAujOs"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script src="scripts/data.js"></script>
+<!--<script src="scripts/main.js"></script>-->
+
+<script src="scripts/form.js"></script>
+<!--<script src="scripts/geocode.js"></script>-->
+<script src="scripts/storage.js"></script>
+
+</body>
+</html>
