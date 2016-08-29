@@ -1,8 +1,9 @@
+//var env = require('dotenv');
 var Express = require('express');
 var app = Express();
 
-var port = 5000;
+var port = process.env.PORT;
 
 app.use('/', Express.static('public', {index: 'index.html'}));
 
-app.listen(port);
+app.listen(port);   
